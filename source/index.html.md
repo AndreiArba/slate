@@ -562,63 +562,233 @@ Success — a list of jobs filtered by the parameters!
 {
   "data": {
     "details": {
-      "client": "Filiaal",
-      "job_type": "",
-      "pickup_place": "",
-      "time_logged": "",
-      "date_time": "",
-      "fillial_address": "Avenue Ceramique 221,Maastricht",
-      "address": "Cluj, Zorilor, 435241",
+      "client": "Blokker",
+      "job_type": "Bediening",
+      "start_time": "2016-02-14 11:00:00",
+      "end_time": "2016-02-14 21:00:00",
+      "pickup_place": "Badhuispleon 7, Zandvoort",
+      "invite_id": 1047,
+      "supervisor": 0,
+      "shift_id": 23,
+      "client_rating": 0,
+      "job_type_rating": 0,
+      "colleagues_rating": 0,
+      "pickup_time": "2016-01-31 12:30:00",
+      "subject": "Landgoed Huize Glory",
+      "description": "Shooble description",
+      "agenda_id": 37,
       "log_work_allowed": true,
       "apply_allowed": false,
-      "invite_id" : 1234,
-      "shift_id": 12,
-      "client_rating" : 3,
-      "job_type_rating" : 2,
-      "colleagues_rating" : 5,
-      "start_time": "2016-06-09 18:55:30",
-      "end_time": "2016-06-09 21:55:30",
-      "pickup_place": "Cluj-Napoca, Caraiman nr 1",
-      "pickup_time" : "2016-02-21 0:00:00",
-      "subject" : "Shooble",
-      "description" : "Test test test",
-      "supervisor": 0 "-- 1 if user is a supervisor",
-      "agenda_id" : 99123
+      "time_logged": "",
+      "fillial_address": "Westerblokker 80,Blokker",
+      "address": "Badhuispleon 7, Zandvoort, 2042 JB"
     },
-    "colleagues": [
+    "colleagues": [],
+    "checkpoints": [],
+    "questions": [
       {
-        "id": 177,
-        "firstname": "Maarten",
-        "lastname": "Mannaerts",
-        "email": "andrei.arba@bitstone.eu",
-        "phone": "+31653572956",
-        "image" : ""
+        "id": 31,
+        "options": [
+          {
+            "label": "dolorem",
+            "name": "consectetur",
+            "type": "signature",
+            "validation": {
+              "is_required": true
+            }
+          },
+          {
+            "label": "qui",
+            "name": "totam",
+            "type": "textarea",
+            "validation": {
+              "is_required": true
+            }
+          },
+          {
+            "label": "illo",
+            "name": "laudantium",
+            "type": "signature",
+            "validation": {
+              "is_required": true
+            }
+          },
+          {
+            "label": "delectus",
+            "name": "esse",
+            "type": "upload",
+            "validation": {
+              "is_required": true
+            }
+          }
+        ],
+        "shift_id": 23,
+        "all_colleagues": 0,
+        "answered": 0,
+        "supervisor_only": 0,
+        "created_at": "2016-05-09 17:14:34",
+        "updated_at": "2016-05-09 17:14:34",
+        "description": "vero nihil autem nostrum quo architecto minima velit neque fugit non quis est quia voluptas",
+        "is_read_only": false,
+        "answers": []
       },
       {
-        "id": 196,
-        "firstname": "Bobby",
-        "lastname": "Grobben",
-        "email": "andrei.arba@bitstone.eu",
-        "phone": "0297272703",
-        "image" : ""
-      }
-    ],
-    "checkpoints": [
+        "id": 49,
+        "options": [
+          {
+            "label": "omnis",
+            "name": "saepe",
+            "type": "slider",
+            "validation": {
+              "is_required": true,
+              "min": 2,
+              "max": 26
+            }
+          },
+          {
+            "label": "rerum",
+            "name": "incidunt",
+            "type": "upload",
+            "validation": {
+              "is_required": false
+            }
+          },
+          {
+            "label": "aut",
+            "name": "adipisci",
+            "type": "textarea",
+            "validation": {
+              "is_required": true
+            }
+          },
+          {
+            "label": "eligendi",
+            "name": "cumque",
+            "type": "slider",
+            "validation": {
+              "is_required": true,
+              "min": 5,
+              "max": 26
+            }
+          },
+          {
+            "label": "voluptatem",
+            "name": "itaque",
+            "type": "signature",
+            "validation": {
+              "is_required": true
+            }
+          },
+          {
+            "label": "omnis",
+            "name": "labore",
+            "type": "slider",
+            "validation": {
+              "is_required": true,
+              "min": 3,
+              "max": 28
+            }
+          },
+          {
+            "label": "inventore",
+            "name": "est",
+            "type": "slider",
+            "validation": {
+              "is_required": true,
+              "min": 2,
+              "max": 30
+            }
+          }
+        ],
+        "shift_id": 23,
+        "all_colleagues": 0,
+        "answered": 1,
+        "supervisor_only": 0,
+        "created_at": "2016-05-09 17:14:34",
+        "updated_at": "2016-05-09 17:14:34",
+        "description": "est placeat iste quo quia explicabo placeat tempore sit culpa et et eos doloribus consequuntur",
+        "is_read_only": true,
+        "answers": [
+          {
+            "id": 10,
+            "question_id": 49,
+            "employee_id": 202,
+            "answer": {
+              "omnis": "vel",
+              "rerum": "totam",
+              "aut": "dignissimos",
+              "eligendi": "saepe",
+              "voluptatem": "aliquam",
+              "inventore": "quam"
+            },
+            "created_at": "2016-05-09 17:14:35",
+            "updated_at": "2016-05-09 17:14:35"
+          }
+        ]
+      },
       {
-        "subject": "Shooble2 23",
-        "start_time": "2016-04-25 00:00:00",
-        "klant": 1518,
-        "location_street": null,
-        "location_postal_code": null,
-        "location_place": null,
-        "checkpoint_id": 52,
-        "template_id": 52,
-        "type": "0",
-        "read_only": true,
-        "checked": true,
-        "checkpoint_timeframe_id": 52,
-        "agenda_invite_id": 1311,
-        "timestamp": "2016-05-03 12:35:31"
+        "id": 53,
+        "options": [
+          {
+            "label": "reprehenderit",
+            "name": "consectetur",
+            "type": "slider",
+            "validation": {
+              "is_required": true,
+              "min": 1,
+              "max": 28
+            }
+          },
+          {
+            "label": "facere",
+            "name": "amet",
+            "type": "signature",
+            "validation": {
+              "is_required": true
+            }
+          },
+          {
+            "label": "minus",
+            "name": "quos",
+            "type": "slider",
+            "validation": {
+              "is_required": true,
+              "min": 5,
+              "max": 11
+            }
+          },
+          {
+            "label": "blanditiis",
+            "name": "et",
+            "type": "text",
+            "validation": {
+              "is_required": false
+            }
+          }
+        ],
+        "shift_id": 23,
+        "all_colleagues": 0,
+        "answered": 1,
+        "supervisor_only": 0,
+        "created_at": "2016-05-09 17:14:35",
+        "updated_at": "2016-05-09 17:14:35",
+        "description": "repudiandae sit dolores eligendi rerum odit nemo provident consequuntur voluptates est nobis ut sed dolor",
+        "is_read_only": true,
+        "answers": [
+          {
+            "id": 12,
+            "question_id": 53,
+            "employee_id": 185,
+            "answer": {
+              "reprehenderit": "temporibus",
+              "facere": "voluptatum",
+              "minus": "velit",
+              "blanditiis": "aut"
+            },
+            "created_at": "2016-05-09 17:14:35",
+            "updated_at": "2016-05-09 17:14:35"
+          }
+        ]
       }
     ]
   },
@@ -732,6 +902,47 @@ Parameter | Optional | Description
 employee_id | false | array of employee ids
 checkpoint_id | false | checkpoint id
 timestamp | true | checkin hour
+
+<aside class="warning">
+Invalid token — an 401 unauthorized response will be received!
+</aside>
+
+<aside class="success">
+Success
+</aside>
+
+## Questionnaire
+
+> The command returns JSON structured like this:
+
+```json
+{
+  "data": {
+    "status": "success   --we can remove this if it's not used"
+  },
+  "status": "success"
+}
+```
+
+This endpoint is used to post the answers for a questionnaire, using the fields received on job details form
+
+### HTTP Request
+
+`POST http://shooble-api.bitstoneint.com/api/v1/work/23/questionnaire/53`
+
+### Headers
+
+This request must contain the authToken header with a valid user token in order to be performed
+
+Header | Value |
+-------| -------
+authToken | a valid login token
+
+### Query Parameters
+
+Parameter | Optional | Description
+--------- | ------- | -----------
+option name | true | Here we will have a list of all options provided for this questions, use the name from option level to name the input field (the same for signature and upload as the upload will be done in a previous call)
 
 <aside class="warning">
 Invalid token — an 401 unauthorized response will be received!
