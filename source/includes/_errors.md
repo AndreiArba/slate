@@ -17,3 +17,19 @@ Error Code | Meaning
 11 | Invalid email!
 12 | User not found!
 13 | Password must be minimum 6 characters and confirmed!
+14 | User can`t be updated!
+15 | Old password is incorrect!
+16 | Availability date not found!
+17 | Availability date can`t be updated!
+18 | Availability date can`t be created!
+19 | Something went wrong!
+20 | Type of device must be set!
+21 | Job not found!
+22 | Shift not found!
+23 | No checkpoints found!
+24 | Questionnaire not found!
+25 | You're not able to answer this question!
+26 | Only the supervisor can answer this question!
+27 | There is already an answer to this question!
+28 | You can't log work!
+100 | Errors from validator
