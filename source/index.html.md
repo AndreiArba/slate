@@ -297,7 +297,7 @@ lastname | true | used to have detailed informations about the user
 email | false | must be a valid email address, will be used to send notifications
 phone | false | must be a valid phone number, will be used to send notifications
 gender | true | used to have detailed informations about the user
-image | true | must be type png,jpg,jpeg,gif,JPG,JPEG,GIF,PDF,PNG
+image | true | image path
 
 <aside class="warning">
 Invalid token — a 401 unauthorized response will be received!
@@ -614,6 +614,8 @@ Success — a list of jobs filtered by the parameters!
         "checkpoint_id": 52,
         "template_id": 52,
         "type": "0",
+        "read_only": true,
+        "checked": true,
         "checkpoint_timeframe_id": 52,
         "agenda_invite_id": 1311,
         "timestamp": "2016-05-03 12:35:31"
@@ -729,7 +731,7 @@ Parameter | Optional | Description
 --------- | ------- | -----------
 employee_id | false | array of employee ids
 checkpoint_id | false | checkpoint id
-unchecked | false | true if user wants to remove checkpoint, false otherwise
+timestamp | true | checkin hour
 
 <aside class="warning">
 Invalid token — an 401 unauthorized response will be received!
@@ -934,6 +936,50 @@ Invalid token — an 401 unauthorized response will be received!
 
 <aside class="success">
 Success
+</aside>
+
+
+#Common
+
+## Upload image
+
+> The command returns JSON structured like this:
+
+```json
+{
+  "data": "http://shooble-api.local/uploads/questionnaire/1/11793332_1020059951360631_1599355863_nTUYKPrO5oDd8YHcp.jpg",
+  "status": "success"
+}
+```
+
+This endpoint is used to upload image on user profile and questionnaire
+
+### HTTP Request
+
+`POST http://shooble-api.bitstoneint.com/api/v1/upload-image`
+
+### Headers
+
+This request must contain the authToken header with a valid user token in order to be performed
+
+Header | Value |
+-------| -------
+authToken| a valid login token
+
+### Query Parameters
+
+Parameter | Optional | Description
+--------- | ------- | -----------
+id | false | id of user or id of questionnaire
+type | false | must be profile or questionnaire
+image | false | must be type png,jpg,jpeg,gif,JPG,JPEG,GIF,PDF,PNG
+
+<aside class="warning">
+Invalid token — a 401 unauthorized response will be received!
+</aside>
+
+<aside class="success">
+Success — a test user is registered!
 </aside>
 
 

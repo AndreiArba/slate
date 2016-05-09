@@ -32,4 +32,5 @@ Error Code | Meaning
 26 | Only the supervisor can answer this question!
 27 | There is already an answer to this question!
 28 | You can't log work!
+29 | Image can\'t be uploaded
 100 | Errors from validator
