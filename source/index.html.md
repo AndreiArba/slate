@@ -581,10 +581,33 @@ Success — a list of jobs filtered by the parameters!
       "apply_allowed": false,
       "time_logged": "",
       "fillial_address": "Westerblokker 80,Blokker",
-      "address": "Badhuispleon 7, Zandvoort, 2042 JB"
+      "address": "Badhuispleon 7, Zandvoort, 2042 JB",
+      "briefing_name": "Briefing Meijer aan Zee",
+      "briefing": "<strong>Van de website:</strong><br />\r\n&lsquo;Strandrestaurant Meijer aan Zee heet u .."
     },
     "colleagues": [],
-    "checkpoints": [],
+    "checkpoints": [
+    {
+        "subject": "Shooble2 25",
+        "start_time": "2016-06-09 18:55:30",
+        "checkpoint_id": 5,
+        "employee_id": 1339,
+        "timestamp": "2016-04-28 14:42:55",
+        "address": "Badhuispleon 7, Zandvoort, 2042 JB",
+        "checked": false,
+        "read_only": true
+      },
+      {
+        "subject": "Shooble2 25",
+        "start_time": "2016-06-09 18:55:30",
+        "checkpoint_id": 6,
+        "employee_id": 1339,
+        "timestamp": "2016-04-28 14:42:55",
+        "address": "Badhuispleon 7, Zandvoort, 2042 JB",
+        "checked": false,
+        "read_only": true
+      }
+    ],
     "questions": [
       {
         "id": 31,
