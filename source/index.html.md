@@ -37,7 +37,8 @@ Welcome to the Shooble API! You can use our API to access Shooble API endpoints
       "phone": "0753174814",
       "image": "uploads/users/242/0gqbu1.jpg",
       "updated_at": "2016-04-13 15:30:19",
-      "created_at": "2016-04-13 15:30:19",
+      "created_at": "2016-04-13 15:
+      30:19",
       "id": 227
     }
   },
@@ -82,32 +83,17 @@ Success — a test user is registered!
       "firstname": "Andrei",
       "lastname": "Arba",
       "email": "andrei.arba@bitstone.eu",
-      "active": null,
-      "member_of": null,
-      "link_id": null,
       "role": "",
-      "counter": null,
-      "created": null,
-      "lastlogin": null,
-      "hyvesnaam": null,
       "image": null,
       "user_type": null,
       "gender": null,
-      "initials": null,
       "phone": "0753174814",
       "mobile": null,
-      "see_holding": null,
-      "default_holding": 0,
       "facebook_username": null,
       "linkedin_username": null,
       "facebook_token": null,
       "facebook_id": null,
-      "planner_group": null,
-      "office_type": null,
-      "ext_id": null,
       "language": null,
-      "lastsync_master": null,
-      "lastsync_slave": null,
       "created_at": "2016-04-13 15:30:19",
       "updated_at": "2016-04-13 15:30:19"
     }
@@ -236,41 +222,27 @@ Success — the password will be reset!
 ```json
 {
   "data": {
-    "id": 225,
-    "username": "testandrei",
-    "firstname": "Andrei",
-    "lastname": "Arba",
-    "email": "andrei.arba@bitstone.eu",
-    "active": null,
-    "member_of": null,
-    "link_id": null,
-    "role": "",
-    "counter": null,
-    "created": null,
-    "lastlogin": null,
-    "hyvesnaam": null,
-    "image": null,
-    "user_type": "test",
-    "gender": "male",
-    "initials": null,
-    "phone": "0753174814",
-    "mobile": "0744444444",
-    "see_holding": null,
-    "default_holding": 0,
-    "facebook_username": null,
-    "linkedin_username": null,
-    "facebook_token": null,
-    "facebook_id": null,
-    "planner_group": null,
-    "office_type": null,
-    "ext_id": null,
-    "language": null,
-    "lastsync_master": null,
-    "lastsync_slave": null,
-    "created_at": "2016-04-11 17:19:59",
-    "updated_at": "2016-04-13 14:15:23"
-  },
-  "status": "success"
+      "authToken": "11974e7892313ad0dd7f084ee5969087d9e61f43",
+      "user": {
+        "id": 227,
+        "username": "testandrei3",
+        "firstname": "Andrei",
+        "lastname": "Arba",
+        "email": "andrei.arba@bitstone.eu",
+        "role": "",
+        "image": null,
+        "user_type": null,
+        "gender": null,
+        "phone": "0753174814",
+        "mobile": null,
+        "facebook_username": null,
+        "linkedin_username": null,
+        "facebook_token": null,
+        "facebook_id": null,
+        "language": null
+      }
+    },
+    "status": "success"
 }
 ```
 
@@ -314,41 +286,27 @@ Success — a test user is registered!
 ```json
 {
   "data": {
-    "id": 225,
-    "username": "testandrei",
-    "firstname": "Andrei",
-    "lastname": "Arba",
-    "email": "andrei.arba@bitstone.eu",
-    "active": null,
-    "member_of": null,
-    "link_id": null,
-    "role": "",
-    "counter": null,
-    "created": null,
-    "lastlogin": null,
-    "hyvesnaam": null,
-    "image": null,
-    "user_type": "test",
-    "gender": "male",
-    "initials": null,
-    "phone": "0753174814",
-    "mobile": "0744444444",
-    "see_holding": null,
-    "default_holding": 0,
-    "facebook_username": null,
-    "linkedin_username": null,
-    "facebook_token": null,
-    "facebook_id": null,
-    "planner_group": null,
-    "office_type": null,
-    "ext_id": null,
-    "language": null,
-    "lastsync_master": null,
-    "lastsync_slave": null,
-    "created_at": "2016-04-11 17:19:59",
-    "updated_at": "2016-04-13 14:15:23"
-  },
-  "status": "success"
+      "authToken": "11974e7892313ad0dd7f084ee5969087d9e61f43",
+      "user": {
+        "id": 227,
+        "username": "testandrei3",
+        "firstname": "Andrei",
+        "lastname": "Arba",
+        "email": "andrei.arba@bitstone.eu",
+        "role": "",
+        "image": null,
+        "user_type": null,
+        "gender": null,
+        "phone": "0753174814",
+        "mobile": null,
+        "facebook_username": null,
+        "linkedin_username": null,
+        "facebook_token": null,
+        "facebook_id": null,
+        "language": null
+      }
+    },
+    "status": "success"
 }
 ```
 
@@ -385,41 +343,27 @@ Success — user details!
 ```json
 {
   "data": {
-    "id": 225,
-    "username": "testandrei",
-    "firstname": "Andrei",
-    "lastname": "Arba",
-    "email": "andrei.arba@bitstone.eu",
-    "active": null,
-    "member_of": null,
-    "link_id": null,
-    "role": "",
-    "counter": null,
-    "created": null,
-    "lastlogin": null,
-    "hyvesnaam": null,
-    "image": null,
-    "user_type": "test",
-    "gender": "male",
-    "initials": null,
-    "phone": "0753174814",
-    "mobile": "0744444444",
-    "see_holding": null,
-    "default_holding": 0,
-    "facebook_username": null,
-    "linkedin_username": null,
-    "facebook_token": null,
-    "facebook_id": null,
-    "planner_group": null,
-    "office_type": null,
-    "ext_id": null,
-    "language": null,
-    "lastsync_master": null,
-    "lastsync_slave": null,
-    "created_at": "2016-04-11 17:19:59",
-    "updated_at": "2016-04-13 14:15:23"
-  },
-  "status": "success"
+      "authToken": "11974e7892313ad0dd7f084ee5969087d9e61f43",
+      "user": {
+        "id": 227,
+        "username": "testandrei3",
+        "firstname": "Andrei",
+        "lastname": "Arba",
+        "email": "andrei.arba@bitstone.eu",
+        "role": "",
+        "image": null,
+        "user_type": null,
+        "gender": null,
+        "phone": "0753174814",
+        "mobile": null,
+        "facebook_username": null,
+        "linkedin_username": null,
+        "facebook_token": null,
+        "facebook_id": null,
+        "language": null
+      }
+    },
+    "status": "success"
 }
 ```
 
@@ -541,8 +485,7 @@ authToken| a valid login token
 Parameter | Optional | Description
 --------- | ------- | -----------
 type | true | possible values all/future/unfilled - default is all
-startdate | true | start date filter for the jobs
-enddate | true | end date filter for the jobs, if startdate and enddate are set this filter type has priority over period
+startdate | true | start date filter for the jobs (EX: 2016-05-11)
 period | true | filter for period, possible values: week/month/year - default is week
 device | true | must be type mobile or desktop
 
@@ -585,7 +528,24 @@ Success — a list of jobs filtered by the parameters!
       "briefing_name": "Briefing Meijer aan Zee",
       "briefing": "<strong>Van de website:</strong><br />\r\n&lsquo;Strandrestaurant Meijer aan Zee heet u .."
     },
-    "colleagues": [],
+    "colleagues": [
+        {
+          "id": 236,
+          "firstname": "Andreiiii",
+          "lastname": "Arbaaa",
+          "email": "andrei.arba@bitstone.eu",
+          "phone": "123456789",
+          "image": null
+        },
+        {
+          "id": 248,
+          "firstname": "Bitstone11",
+          "lastname": "Test11",
+          "email": "andrei.arba@bitstone.eu",
+          "phone": "123456789",
+          "image": null
+        }
+    ],
     "checkpoints": [
     {
         "subject": "Shooble2 25",
@@ -819,7 +779,7 @@ Success — a list of jobs filtered by the parameters!
 }
 ```
 
-This endpoint is used to display the job details.
+This endpoint is used to display the job details based on shift_id.
 
 ### HTTP Request
 
@@ -924,7 +884,7 @@ Parameter | Optional | Description
 --------- | ------- | -----------
 employee_id | false | array of employee ids
 checkpoint_id | false | checkpoint id
-timestamp | true | checkin hour
+timestamp | true | checkin hour and date (EX: 2016-05-20 12:30:00)
 
 <aside class="warning">
 Invalid token — an 401 unauthorized response will be received!
@@ -1033,7 +993,7 @@ authToken | a valid login token
 
 Parameter | Optional | Description
 --------- | ------- | -----------
-startdate | false | start date filter for the availability dates
+startdate | false | start date filter for the availability dates (EX: 2016-05-13)
 period | false | filter for period, possible values: week/month/year - default is week
 
 <aside class="warning">
@@ -1045,6 +1005,35 @@ Success — the availability dates
 </aside>
 
 ## Update/Create availability dates
+
+> The post parameters should be structured like this:
+
+```json
+[
+    {
+        "id":0,
+        "plan_time": "2016-04-20 10:00:00",
+        "employee": 247,
+        "available": ["a", "e"],
+        "comment": "works",
+        "transport": {
+            "type": "car",
+            "seats": 3
+        }
+    },
+    {
+        "id":1146,
+        "plan_time": "2016-04-20 20:00:00",
+        "employee": 247,
+        "available": ["m","a", "e"],
+        "comment": "works update",
+        "transport": {
+          "type": "car",
+          "seats": 1
+        }
+    }
+]
+```
 
 > The command returns JSON structured like this:
 
@@ -1117,7 +1106,7 @@ authToken | a valid login token
 
 Parameter | Optional | Description
 --------- | ------- | -----------
-id | false | id of the job(agenda id)
+id | false | id of the job(shift id)
 start_time | false | start time of the job (ex: HH:mm:ss)
 end_time | false | end time of the job (ex: HH:mm:ss)
 break | true | an integer with number of minutes
@@ -1138,7 +1127,50 @@ Success
 ```json
 {
   "data": {
-      "status": "success   --we can remove this if it's not used"
+      "details": {
+        "client": "Amsterdam",
+        "job_type": "Type 3",
+        "start_time": "2016-07-15 00:55:14",
+        "end_time": "2016-07-15 03:55:14",
+        "pickup_place": "Badhuispleon 7, Zandvoort",
+        "invite_id": null,
+        "supervisor": null,
+        "shift_id": null,
+        "client_rating": 0,
+        "job_type_rating": 0,
+        "colleagues_rating": 0,
+        "pickup_time": "2016-01-31 12:30:00",
+        "subject": "Shooble2 8",
+        "description": "Shooble description",
+        "agenda_id": 99195,
+        "briefing_name": null,
+        "briefing": null,
+        "log_work_allowed": false,
+        "apply_allowed": false,
+        "time_logged": 0,
+        "fillial_address": "Europaplein  71,Amsterdam",
+        "address": "Badhuispleon 7, Zandvoort, 2042 JB"
+      },
+      "colleagues": [
+        {
+          "id": 236,
+          "firstname": "Andreiiii",
+          "lastname": "Arbaaa",
+          "email": "andrei.arba@bitstone.eu",
+          "phone": "123456789",
+          "image": null
+        },
+        {
+          "id": 248,
+          "firstname": "Bitstone11",
+          "lastname": "Test11",
+          "email": "andrei.arba@bitstone.eu",
+          "phone": "123456789",
+          "image": null
+        }
+      ],
+      "checkpoints": [],
+      "questions": []
     },
     "status": "success"
 }
@@ -1162,7 +1194,7 @@ authToken | a valid login token
 
 Parameter | Optional | Description
 --------- | ------- | -----------
-id | false | id of the job(agenda id)
+id | false | id of the job(invite id)
 
 <aside class="warning">
 Invalid token — an 401 unauthorized response will be received!
@@ -1181,7 +1213,7 @@ Success
 
 ```json
 {
-  "data": "http://shooble-api.local/uploads/questionnaire/1/11793332_1020059951360631_1599355863_nTUYKPrO5oDd8YHcp.jpg",
+  "data": "http://shooble-api.com/uploads/questionnaire/1/11793332_1020059951360631_1599355863_nTUYKPrO5oDd8YHcp.jpg",
   "status": "success"
 }
 ```
@@ -1190,7 +1222,7 @@ This endpoint is used to upload image on user profile and questionnaire
 
 ### HTTP Request
 
-`POST http://shooble-api.bitstoneint.com/api/v1/upload-image`
+`POST http://shooble-api.bitstoneint.com/api/v1/upload`
 
 ### Headers
 
