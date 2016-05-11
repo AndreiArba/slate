@@ -34,11 +34,10 @@ Welcome to the Shooble API! You can use our API to access Shooble API endpoints
       "email": "andrei.arba@bitstone.eu",
       "firstname": "Andrei",
       "lastname": "Arba",
-      "phone": "0753174814",
+      "phone": "0753174800",
       "image": "uploads/users/242/0gqbu1.jpg",
       "updated_at": "2016-04-13 15:30:19",
-      "created_at": "2016-04-13 15:
-      30:19",
+      "created_at": "2016-04-13 15:30:19",
       "id": 227
     }
   },
@@ -87,7 +86,7 @@ Success — a test user is registered!
       "image": null,
       "user_type": null,
       "gender": null,
-      "phone": "0753174814",
+      "phone": "0753174800",
       "mobile": null,
       "facebook_username": null,
       "linkedin_username": null,
@@ -112,8 +111,8 @@ This endpoint is used for authentication. On a successful attempt, a token will 
 
 Parameter | Optional |Description
 --------- | --------- | ------------
-username | false |
-password | false |
+username | false | username
+password | false | password
 
 <aside class="success">
 Success — a user is authenticated and able to make api calls!
@@ -132,7 +131,7 @@ Success — a user is authenticated and able to make api calls!
 }
 ```
 
-This endpoint is used just temporary in order to have some test data.
+This endpoint is used to logout current user.
 
 ### HTTP Request
 
@@ -159,7 +158,7 @@ Success — a test user is registered!
 ```json
 {
   "data": {
-    "status": "success   --we can remove this if it's not used"
+    "status": "success"
   },
   "status": "success"
 }
@@ -189,7 +188,7 @@ Success — an email with password reset link is send to the user!
 ```json
 {
   "data": {
-    "status": "success   --we can remove this if it's not used"
+    "status": "success"
   },
   "status": "success"
 }
@@ -233,7 +232,7 @@ Success — the password will be reset!
         "image": null,
         "user_type": null,
         "gender": null,
-        "phone": "0753174814",
+        "phone": "0753174800",
         "mobile": null,
         "facebook_username": null,
         "linkedin_username": null,
@@ -297,7 +296,7 @@ Success — a test user is registered!
         "image": null,
         "user_type": null,
         "gender": null,
-        "phone": "0753174814",
+        "phone": "0753174800",
         "mobile": null,
         "facebook_username": null,
         "linkedin_username": null,
@@ -354,7 +353,7 @@ Success — user details!
         "image": null,
         "user_type": null,
         "gender": null,
-        "phone": "0753174814",
+        "phone": "0753174800",
         "mobile": null,
         "facebook_username": null,
         "linkedin_username": null,
@@ -423,7 +422,7 @@ Success — user details!
       "time": "2016-01-01 00:00:00",
       "fillial_location": "Nieuwe Kalfjeslaan  19,Amstelveen",
       "log_work_allowed": true,
-      "apply_allowed" : true
+      "apply_allowed" : true,
       "supervisor": 0
     },
     {
@@ -432,7 +431,7 @@ Success — user details!
       "time": "2016-01-21 00:00:00",
       "fillial_location": "Arena Boulevard 155,Amsterdam",
       "log_work_allowed": true,
-      "apply_allowed" : false
+      "apply_allowed" : false,
       "supervisor": 0
     },
     {
@@ -441,7 +440,7 @@ Success — user details!
       "time": "2016-01-26 00:00:00",
       "fillial_location": "Arena Boulevard 155,Amsterdam",
       "log_work_allowed": true,
-      "apply_allowed" : true
+      "apply_allowed" : true,
       "supervisor": 0
     },
     {
@@ -450,7 +449,7 @@ Success — user details!
       "time": "2016-01-29 00:00:00",
       "fillial_location": "Arena Boulevard 155,Amsterdam",
       "log_work_allowed": true,
-      "apply_allowed" : true
+      "apply_allowed" : true,
       "supervisor": 1
     },
     {
@@ -459,7 +458,7 @@ Success — user details!
       "time": "2016-04-14 00:00:00",
       "fillial_location": "",
       "log_work_allowed": true,
-      "apply_allowed" : true
+      "apply_allowed" : true,
     }
   ],
   "status": "success"
@@ -485,7 +484,7 @@ authToken| a valid login token
 Parameter | Optional | Description
 --------- | ------- | -----------
 type | true | possible values all/future/unfilled - default is all
-startdate | true | start date filter for the jobs (EX: 2016-05-11)
+startdate | true | start date filter for the jobs (EX: YYYY-MM-DD)
 period | true | filter for period, possible values: week/month/year - default is week
 device | true | must be type mobile or desktop
 
@@ -783,7 +782,7 @@ This endpoint is used to display the job details based on shift_id.
 
 ### HTTP Request
 
-`GET http://shooble-api.bitstoneint.com/api/v1/work/<ID>`
+`GET http://shooble-api.bitstoneint.com/api/v1/work/<shift_id>`
 
 ### Headers
 
@@ -814,7 +813,7 @@ Success — the job details
 ```json
 {
   "data": {
-    "status": "success   --we can remove this if it's not used"
+    "status": "success"
   },
   "status": "success"
 }
@@ -858,7 +857,7 @@ Success — the job details
 ```json
 {
   "data": {
-    "status": "success   --we can remove this if it's not used"
+    "status": "success"
   },
   "status": "success"
 }
@@ -884,7 +883,7 @@ Parameter | Optional | Description
 --------- | ------- | -----------
 employee_id | false | array of employee ids
 checkpoint_id | false | checkpoint id
-timestamp | true | checkin hour and date (EX: 2016-05-20 12:30:00)
+timestamp | true | checkin hour and date (EX: YYYY-MM-DD HH:MM:SS)
 
 <aside class="warning">
 Invalid token — an 401 unauthorized response will be received!
@@ -901,7 +900,7 @@ Success
 ```json
 {
   "data": {
-    "status": "success   --we can remove this if it's not used"
+    "status": "success"
   },
   "status": "success"
 }
@@ -911,7 +910,7 @@ This endpoint is used to post the answers for a questionnaire, using the fields 
 
 ### HTTP Request
 
-`POST http://shooble-api.bitstoneint.com/api/v1/work/23/questionnaire/53`
+`POST http://shooble-api.bitstoneint.com/api/v1/work/<shift_id>/questionnaire/<questionnaire_id>`
 
 ### Headers
 
@@ -993,7 +992,7 @@ authToken | a valid login token
 
 Parameter | Optional | Description
 --------- | ------- | -----------
-startdate | false | start date filter for the availability dates (EX: 2016-05-13)
+startdate | false | start date filter for the availability dates (EX: YYYY-MM-DD)
 period | false | filter for period, possible values: week/month/year - default is week
 
 <aside class="warning">
@@ -1040,7 +1039,7 @@ Success — the availability dates
 ```json
 {
   "data": {
-      "status": "success   --we can remove this if it's not used"
+      "status": "success"
     },
     "status": "success"
 }
@@ -1081,52 +1080,7 @@ Success — the availability dates will be created or updated!
 
 ```json
 {
-  "data": {
-      "status": "success   --we can remove this if it's not used"
-    },
-    "status": "success"
-}
-```
-
-This endpoint is used to log hours.
-
-### HTTP Request
-
-`POST http://shooble-api.bitstoneint.com/api/v1/log-work`
-
-### Headers
-
-This request must contain the authToken header with a valid user token in order to be performed
-
-Header | Value |
--------| -------
-authToken | a valid login token
-
-### Query Parameters
-
-Parameter | Optional | Description
---------- | ------- | -----------
-id | false | id of the job(shift id)
-start_time | false | start time of the job (ex: HH:mm:ss)
-end_time | false | end time of the job (ex: HH:mm:ss)
-break | true | an integer with number of minutes
-employee_id | false | array of employee ids
-
-<aside class="warning">
-Invalid token — an 401 unauthorized response will be received!
-</aside>
-
-<aside class="success">
-Success
-</aside>
-
-## Set supervisor
-
-> The command returns JSON structured like this:
-
-```json
-{
-  "data": {
+"data": {
       "details": {
         "client": "Amsterdam",
         "job_type": "Type 3",
@@ -1173,6 +1127,51 @@ Success
       "questions": []
     },
     "status": "success"
+}
+```
+
+This endpoint is used to log hours.
+
+### HTTP Request
+
+`POST http://shooble-api.bitstoneint.com/api/v1/log-work`
+
+### Headers
+
+This request must contain the authToken header with a valid user token in order to be performed
+
+Header | Value |
+-------| -------
+authToken | a valid login token
+
+### Query Parameters
+
+Parameter | Optional | Description
+--------- | ------- | -----------
+id | false | id of the job(shift id)
+start_time | false | start time of the job (ex: HH:mm:ss)
+end_time | false | end time of the job (ex: HH:mm:ss)
+break | true | an integer with number of minutes
+employee_id | false | array of employee ids
+
+<aside class="warning">
+Invalid token — an 401 unauthorized response will be received!
+</aside>
+
+<aside class="success">
+Success
+</aside>
+
+## Set supervisor
+
+> The command returns JSON structured like this:
+
+```json
+{
+  "data": {
+        "status": "success"
+      },
+      "status": "success"
 }
 ```
 
