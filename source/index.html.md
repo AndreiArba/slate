@@ -176,7 +176,7 @@ The token needs to be added in the following reset request.
 
 Parameter | Optional | Description
 --------- | ------- | -----------
-email | false | must be a valid email address, will be used to send the reset link
+username | false | must be a valid username
 
 <aside class="success">
 Success — an email with password reset link is send to the user!
