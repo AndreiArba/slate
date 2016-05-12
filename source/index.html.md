@@ -51,7 +51,7 @@ This endpoint is used just temporary in order to have some test data.
 
 `POST http://shooble-api.bitstoneint.com/api/v1/register`
 
-### Query Parameters
+### POST Parameters
 
 Parameter | Optional | Description
 --------- | ------- | -----------
@@ -107,12 +107,13 @@ This endpoint is used for authentication. On a successful attempt, a token will 
 
 `POST http://shooble-api.bitstoneint.com/api/v1/login`
 
-### URL Parameters
+### POST Parameters
 
 Parameter | Optional |Description
 --------- | --------- | ------------
 username | false | username
 password | false | password
+remember | true | true or false, if true authToken will be available for 3 years otherwise 24 hours
 
 <aside class="success">
 Success — a user is authenticated and able to make api calls!
@@ -171,7 +172,7 @@ The token needs to be added in the following reset request.
 
 `POST http://shooble-api.bitstoneint.com/api/v1/remind`
 
-### Query Parameters
+### POST Parameters
 
 Parameter | Optional | Description
 --------- | ------- | -----------
@@ -200,7 +201,7 @@ This endpoint is used to reset a user password.
 
 `POST http://shooble-api.bitstoneint.com/api/v1/reset`
 
-### Query Parameters
+### POST Parameters
 
 Parameter | Optional | Description
 --------- | ------- | -----------
@@ -259,7 +260,7 @@ Header | Value |
 -------| -------
 authToken| a valid login token
 
-### Query Parameters
+### POST Parameters
 
 Parameter | Optional | Description
 --------- | ------- | -----------
@@ -370,7 +371,7 @@ This endpoint is used to change user password
 
 ### HTTP Request
 
-`GET http://shooble-api.bitstoneint.com/api/v1/change-password`
+`POST http://shooble-api.bitstoneint.com/api/v1/change-password`
 
 ### Headers
 
@@ -380,7 +381,7 @@ Header | Value |
 -------| -------
 authToken| a valid login token
 
-### Query Parameters
+### POST Parameters
 
 Parameter | Optional | Description
 --------- | ------- | -----------
@@ -465,7 +466,7 @@ Success — user details!
 }
 ```
 
-This endpoint is used to display the jobs tables, my future jobs, my jobs and jobs completed but without the hours filled.
+This endpoint is used to display the jobs tables: my future jobs, my jobs and jobs completed but without the hours filled.
 
 ### HTTP Request
 
@@ -834,7 +835,7 @@ Header | Value |
 -------| -------
 authToken | a valid login token
 
-### Query Parameters
+### POST Parameters
 
 Parameter | Optional | Description
 --------- | ------- | -----------
@@ -877,7 +878,7 @@ Header | Value |
 -------| -------
 authToken | a valid login token
 
-### Query Parameters
+### POST Parameters
 
 Parameter | Optional | Description
 --------- | ------- | -----------
@@ -920,7 +921,7 @@ Header | Value |
 -------| -------
 authToken | a valid login token
 
-### Query Parameters
+### POST Parameters
 
 Parameter | Optional | Description
 --------- | ------- | -----------
@@ -1045,7 +1046,7 @@ Success — the availability dates
 }
 ```
 
-This endpoint is used to display availability dates for user.
+This endpoint is used to create/update availability dates for user.
 Make the request both on pagination and on submit
 
 ### HTTP Request
@@ -1060,7 +1061,7 @@ Header | Value |
 -------| -------
 authToken | a valid login token
 
-### Query Parameters
+### POST Parameters
 
 Parameter | Optional | Description
 --------- | ------- | -----------
@@ -1144,7 +1145,7 @@ Header | Value |
 -------| -------
 authToken | a valid login token
 
-### Query Parameters
+### POST Parameters
 
 Parameter | Optional | Description
 --------- | ------- | -----------
@@ -1189,7 +1190,7 @@ Header | Value |
 -------| -------
 authToken | a valid login token
 
-### Query Parameters
+### POST Parameters
 
 Parameter | Optional | Description
 --------- | ------- | -----------
@@ -1231,7 +1232,7 @@ Header | Value |
 -------| -------
 authToken| a valid login token
 
-### Query Parameters
+### POST Parameters
 
 Parameter | Optional | Description
 --------- | ------- | -----------
