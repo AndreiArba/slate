@@ -409,18 +409,21 @@ Success — user details!
     {
       "id": 3,
       "client": "Filiaal",
-      "time": "2015-12-31 00:00:00",
+      "time": "Monday 30 May 2016",
       "fillial_location": "",
       "log_work_allowed": true
        "-- true if employee can log hours, only for my jobs and jobs completed but without the hours filled",
        "apply_allowed" : true
        "--true if employee can apply to the job",
-       "supervisor": 0 "-- 1 if user is a supervisor"
+       "supervisor": 0 "-- 1 if user is a supervisor",
+       "pickup_time": "12:30" "---only for future",
+       "start_time": "13:00" "---only for future/unfilled jobs",
+       "end_time": "17:00" "---only for unfilled jobs"
     },
     {
       "id": 2,
       "client": "AHBC",
-      "time": "2016-01-01 00:00:00",
+      "time": "Monday 30 May 2016",
       "fillial_location": "Nieuwe Kalfjeslaan  19,Amstelveen",
       "log_work_allowed": true,
       "apply_allowed" : true,
@@ -429,7 +432,7 @@ Success — user details!
     {
       "id": 11,
       "client": "Amsterdam",
-      "time": "2016-01-21 00:00:00",
+      "time": "Monday 30 May 2016",
       "fillial_location": "Arena Boulevard 155,Amsterdam",
       "log_work_allowed": true,
       "apply_allowed" : false,
@@ -438,7 +441,7 @@ Success — user details!
     {
       "id": 14,
       "client": "Amsterdam",
-      "time": "2016-01-26 00:00:00",
+      "time": "Monday 30 May 2016",
       "fillial_location": "Arena Boulevard 155,Amsterdam",
       "log_work_allowed": true,
       "apply_allowed" : true,
@@ -447,7 +450,7 @@ Success — user details!
     {
       "id": 17,
       "client": "Amsterdam",
-      "time": "2016-01-29 00:00:00",
+      "time": "Monday 30 May 2016",
       "fillial_location": "Arena Boulevard 155,Amsterdam",
       "log_work_allowed": true,
       "apply_allowed" : true,
@@ -456,7 +459,7 @@ Success — user details!
     {
       "id": 4,
       "client": "Reserve / Stand by",
-      "time": "2016-04-14 00:00:00",
+      "time": "Monday 30 May 2016",
       "fillial_location": "",
       "log_work_allowed": true,
       "apply_allowed" : true,
@@ -516,6 +519,9 @@ Success — a list of jobs filtered by the parameters!
       "client_rating": 0,
       "job_type_rating": 0,
       "colleagues_rating": 0,
+      "client_rating_comment": "client comment",
+      "job_type_rating_comment": "job type comment",
+      "colleagues_rating_comment": "colleagues comment",
       "pickup_time": "2016-01-31 12:30:00",
       "subject": "Landgoed Huize Glory",
       "description": "Shooble description",
@@ -555,6 +561,8 @@ Success — a list of jobs filtered by the parameters!
         "timestamp": "2016-04-28 14:42:55",
         "address": "Badhuispleon 7, Zandvoort, 2042 JB",
         "checked": false,
+        "description" : "Checkpoint description",
+        "notes" : "Some notes",
         "read_only": true
       },
       {
@@ -565,6 +573,8 @@ Success — a list of jobs filtered by the parameters!
         "timestamp": "2016-04-28 14:42:55",
         "address": "Badhuispleon 7, Zandvoort, 2042 JB",
         "checked": false,
+        "description" : "Checkpoint description",
+        "notes" : "Some notes",
         "read_only": true
       }
     ],
@@ -798,50 +808,6 @@ authToken | a valid login token
 Parameter | Optional | Description
 --------- | ------- | -----------
 device | true | must be type mobile or desktop
-
-<aside class="warning">
-Invalid token — an 401 unauthorized response will be received!
-</aside>
-
-<aside class="success">
-Success — the job details
-</aside>
-
-## Evaluation on job details
-
-> The command returns JSON structured like this:
-
-```json
-{
-  "data": {
-    "status": "success"
-  },
-  "status": "success"
-}
-```
-
-This endpoint is used by supervisor to evaluate client/job type/colleagues
-ONLY supervisor can evaluate
-
-### HTTP Request
-
-`POST http://shooble-api.bitstoneint.com/api/v1/work-evaluation`
-
-### Headers
-
-This request must contain the authToken header with a valid user token in order to be performed
-
-Header | Value |
--------| -------
-authToken | a valid login token
-
-### POST Parameters
-
-Parameter | Optional | Description
---------- | ------- | -----------
-id | false | shift_id from job details
-rating | false | specific rating
-type | false | should be a value from: client/job_type/colleagues
 
 <aside class="warning">
 Invalid token — an 401 unauthorized response will be received!
@@ -1131,7 +1097,7 @@ Success — the availability dates will be created or updated!
 }
 ```
 
-This endpoint is used to log hours.
+This endpoint is used to log hours and evaluate job type/client/colleagues.
 
 ### HTTP Request
 
@@ -1154,6 +1120,70 @@ start_time | false | start time of the job (ex: HH:mm:ss)
 end_time | false | end time of the job (ex: HH:mm:ss)
 break | true | an integer with number of minutes
 employee_id | false | array of employee ids
+client_rating | true | rating for client
+job_type_rating | true | rating for job type
+colleagues_rating | true | rating for colleagues
+client_rating_comment | true | comment for client rating
+job_type_rating_comment | true | comment for job type rating
+colleagues_rating_comment | true | comment for colleagues rating
+
+<aside class="warning">
+Invalid token — an 401 unauthorized response will be received!
+</aside>
+
+<aside class="success">
+Success
+</aside>
+
+## Evaluation
+
+> The command returns JSON structured like this:
+
+```json
+{
+  "data": {
+      "shift_id": 699,
+      "id": 1553,
+      "employee": 522,
+      "employee_set": "1",
+      "supervisor": 0,
+      "client_rating": "4",
+      "job_type_rating": "5",
+      "colleagues_rating": "5",
+      "client_rating_comment": "test client",
+      "job_type_rating_comment": "test job type",
+      "colleagues_rating_comment": "test colleagues"
+    },
+    "status": "success"
+}
+```
+
+This endpoint is used to evaluate a job
+
+### HTTP Request
+
+`POST http://shooble-api.bitstoneint.com/api/v1/work-evaluation`
+
+### Headers
+
+This request must contain the authToken header with a valid user token in order to be performed
+
+Header | Value |
+-------| -------
+authToken | a valid login token
+
+### POST Parameters
+
+Parameter | Optional | Description
+--------- | ------- | -----------
+id | false | shift id
+employee_id | false | array of employee ids
+client_rating | false | client rating
+job_type_rating | false | job type rating
+colleagues_rating | false | colleagues rating
+client_rating_comment | true | client rating comment
+job_type_rating_comment | true | job type rating comment
+colleagues_rating_comment | true | colleagues rating comment
 
 <aside class="warning">
 Invalid token — an 401 unauthorized response will be received!
@@ -1239,6 +1269,89 @@ Parameter | Optional | Description
 id | false | id of user or id of questionnaire
 type | false | must be profile or questionnaire
 image | false | must be type png,jpg,jpeg,gif,JPG,JPEG,GIF,PDF,PNG
+
+<aside class="warning">
+Invalid token — a 401 unauthorized response will be received!
+</aside>
+
+<aside class="success">
+Success — a test user is registered!
+</aside>
+
+#Admin
+
+## Get users
+
+> The command returns JSON structured like this:
+
+```json
+{
+  "data": [
+    {
+      "id": 428,
+      "username": "zonne.holtslag",
+      "firstname": "Zonne",
+      "lastname": "Holtslag",
+      "email": "oana.vlad@bitstone.eu",
+      "active": "1",
+      "member_of": "99910",
+      "link_id": null,
+      "role": "",
+      "counter": 1,
+      "created": null,
+      "lastlogin": "2016-04-22 00:00:00",
+      "hyvesnaam": null,
+      "image": null,
+      "user_type": "employee",
+      "gender": "female",
+      "initials": "",
+      "phone": "123456789",
+      "mobile": "123456789",
+      "see_holding": "",
+      "default_holding": 0,
+      "facebook_username": "",
+      "linkedin_username": "",
+      "facebook_token": "",
+      "facebook_id": "",
+      "planner_group": "",
+      "office_type": "",
+      "ext_id": 0,
+      "language": "nl",
+      "lastsync_master": "0000-00-00 00:00:00",
+      "lastsync_slave": "0000-00-00 00:00:00",
+      "last_change": "2016-05-03 13:21:08",
+      "created_at": null,
+      "updated_at": "2016-05-13 14:32:33",
+      "tmp_password": "e9b00a95",
+      "is_admin": 0
+    }
+  ],
+  "status": "success"
+}
+```
+
+This endpoint is used to get all users if logged user is an admin and filter them ascending or descending by specific field or search after a keyword.
+If sort_field and sort_type are not set the default values are: sort_field='username' and sort_type='asc'.
+
+### HTTP Request
+
+`GET http://shooble-api.bitstoneint.com/api/v1/users`
+
+### Headers
+
+This request must contain the authToken header with a valid user token in order to be performed
+
+Header | Value |
+-------| -------
+authToken| a valid login token
+
+### Query Parameters
+
+Parameter | Optional | Description
+--------- | ------- | -----------
+sort_field | true | must be one of the user fields(username, firstname, lastname, email, user_type, gender, phone, mobile)
+sort_type | true | must be asc or desc
+keyword | true | any keyword
 
 <aside class="warning">
 Invalid token — a 401 unauthorized response will be received!

@@ -33,4 +33,6 @@ Error Code | Meaning
 27 | There is already an answer to this question!
 28 | You can't log work!
 29 | Image can't be uploaded
+30 | You are not an admin
+31 | Users not found
 100 | Errors from validator
