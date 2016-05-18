@@ -915,35 +915,116 @@ Success
 ```json
 {
   "data": [
-      {
-        "id": 24,
-        "plan_time": "2016-01-02 00:00:00",
-        "employee": 115,
-        "available": [
-          "a",
-          "e"
-        ],
-        "comment": "",
-        "transport": {
-          "type": "",
-          "seats": 0
-        }
+    {
+      "id": 12290,
+      "plan_time": "2016-05-17 00:00:00",
+      "employee": 522,
+      "comment": "",
+      "agenda": 0,
+      "transport": {
+        "type": "none",
+        "seats": 0
       },
-      {
-        "id": 36,
-        "plan_time": "2016-01-07 00:00:00",
-        "employee": 115,
-        "available": [
-          "a",
-          "e"
-        ],
-        "comment": "",
-        "transport": {
-          "type": "",
-          "seats": 0
-        }
+      "disabled": true,
+      "available_dates": {
+        "a": false, "true - scheduled on this interval"
+        "e": false
       }
-    ],
+    },
+    {
+      "id": 12291,
+      "plan_time": "2016-05-18 00:00:00",
+      "employee": 522,
+      "comment": "",
+      "agenda": 0,
+      "transport": {
+        "type": "",
+        "seats": 0
+      },
+      "disabled": true,
+      "available_dates": {
+        "m": false,
+        "a": false,
+        "e": false,
+        "n": false
+      }
+    },
+    {
+      "id": 12292,
+      "plan_time": "2016-05-19 00:00:00",
+      "employee": 522,
+      "comment": "",
+      "agenda": 0,
+      "transport": {
+        "type": "",
+        "seats": 0
+      },
+      "disabled": false,
+      "available_dates": {
+        "m": false,
+        "e": false
+      }
+    },
+    {
+      "id": 12293,
+      "plan_time": "2016-05-20 00:00:00",
+      "employee": 522,
+      "comment": "",
+      "agenda": 0,
+      "transport": {
+        "type": "",
+        "seats": 0
+      },
+      "disabled": false,
+      "available_dates": {
+        "m": false,
+        "e": false
+      }
+    },
+    {
+      "id": 12294,
+      "plan_time": "2016-05-21 00:00:00",
+      "employee": 522,
+      "comment": "",
+      "agenda": 0,
+      "transport": {
+        "type": "",
+        "seats": 0
+      },
+      "disabled": false,
+      "available_dates": {
+        "a": false
+      }
+    },
+    {
+      "id": 12295,
+      "plan_time": "2016-05-22 00:00:00",
+      "employee": 522,
+      "comment": "",
+      "agenda": 0,
+      "transport": {
+        "type": "",
+        "seats": 0
+      },
+      "disabled": false,
+      "available_dates": {
+        "e": false
+      }
+    },
+    {
+      "id": 12347,
+      "plan_time": "2016-05-16 00:00:00",
+      "employee": 522,
+      "comment": "",
+      "agenda": 0,
+      "transport": {
+        "type": "",
+        "seats": 0
+      },
+      "disabled": true,
+      "available_dates": []
+    }
+  ],
   "status": "success"
 }
 ```
