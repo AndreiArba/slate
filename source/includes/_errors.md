@@ -35,4 +35,6 @@ Error Code | Meaning
 29 | Image can't be uploaded
 30 | You are not an admin
 31 | Users not found
+32 | You can't unchecked this checkpoint
+33 | You are not allowed to check this checkpoint
 100 | Errors from validator

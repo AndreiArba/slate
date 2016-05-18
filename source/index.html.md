@@ -418,7 +418,8 @@ Success — user details!
        "supervisor": 0 "-- 1 if user is a supervisor",
        "pickup_time": "12:30" "---only for future",
        "start_time": "13:00" "---only for future/unfilled jobs",
-       "end_time": "17:00" "---only for unfilled jobs"
+       "end_time": "17:00" "---only for unfilled jobs",
+       "subject": "Epsom UK"
     },
     {
       "id": 2,
@@ -427,7 +428,8 @@ Success — user details!
       "fillial_location": "Nieuwe Kalfjeslaan  19,Amstelveen",
       "log_work_allowed": true,
       "apply_allowed" : true,
-      "supervisor": 0
+      "supervisor": 0,
+      "subject": "Epsom UK"
     },
     {
       "id": 11,
@@ -436,7 +438,8 @@ Success — user details!
       "fillial_location": "Arena Boulevard 155,Amsterdam",
       "log_work_allowed": true,
       "apply_allowed" : false,
-      "supervisor": 0
+      "supervisor": 0,
+      "subject": "Epsom UK"
     },
     {
       "id": 14,
@@ -445,7 +448,8 @@ Success — user details!
       "fillial_location": "Arena Boulevard 155,Amsterdam",
       "log_work_allowed": true,
       "apply_allowed" : true,
-      "supervisor": 0
+      "supervisor": 0,
+      "subject": "Epsom UK"
     },
     {
       "id": 17,
@@ -454,7 +458,8 @@ Success — user details!
       "fillial_location": "Arena Boulevard 155,Amsterdam",
       "log_work_allowed": true,
       "apply_allowed" : true,
-      "supervisor": 1
+      "supervisor": 1,
+      "subject": "Epsom UK"
     },
     {
       "id": 4,
@@ -463,6 +468,7 @@ Success — user details!
       "fillial_location": "",
       "log_work_allowed": true,
       "apply_allowed" : true,
+      "subject": "Epsom UK"
     }
   ],
   "status": "success"
@@ -532,7 +538,8 @@ Success — a list of jobs filtered by the parameters!
       "fillial_address": "Westerblokker 80,Blokker",
       "address": "Badhuispleon 7, Zandvoort, 2042 JB",
       "briefing_name": "Briefing Meijer aan Zee",
-      "briefing": "<strong>Van de website:</strong><br />\r\n&lsquo;Strandrestaurant Meijer aan Zee heet u .."
+      "briefing": "<strong>Van de website:</strong><br />\r\n&lsquo;Strandrestaurant Meijer aan Zee heet u ..",
+      "past" : true "--- true if end time of the job is in the past, otherwise false"
     },
     "colleagues": [
         {
@@ -978,7 +985,7 @@ Success — the availability dates
 [
     {
         "id":0,
-        "plan_time": "2016-04-20 10:00:00",
+        "plan_time": "2016-04-20 00:00:00",
         "employee": 247,
         "available": ["a", "e"],
         "comment": "works",
@@ -989,7 +996,7 @@ Success — the availability dates
     },
     {
         "id":1146,
-        "plan_time": "2016-04-20 20:00:00",
+        "plan_time": "2016-04-21 00:00:00",
         "employee": 247,
         "available": ["m","a", "e"],
         "comment": "works update",
