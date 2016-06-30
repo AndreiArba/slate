@@ -915,116 +915,35 @@ Success
 ```json
 {
   "data": [
-    {
-      "id": 12290,
-      "plan_time": "2016-05-17 00:00:00",
-      "employee": 522,
-      "comment": "",
-      "agenda": 0,
-      "transport": {
-        "type": "none",
-        "seats": 0
+      {
+        "id": 24,
+        "plan_time": "2016-01-02 00:00:00",
+        "employee": 115,
+        "available": [
+          "a",
+          "e"
+        ],
+        "comment": "",
+        "transport": {
+          "type": "",
+          "seats": 0
+        }
       },
-      "disabled": true,
-      "available_dates": {
-        "a": false, "true - scheduled on this interval"
-        "e": false
+      {
+        "id": 36,
+        "plan_time": "2016-01-07 00:00:00",
+        "employee": 115,
+        "available": [
+          "a",
+          "e"
+        ],
+        "comment": "",
+        "transport": {
+          "type": "",
+          "seats": 0
+        }
       }
-    },
-    {
-      "id": 12291,
-      "plan_time": "2016-05-18 00:00:00",
-      "employee": 522,
-      "comment": "",
-      "agenda": 0,
-      "transport": {
-        "type": "",
-        "seats": 0
-      },
-      "disabled": true,
-      "available_dates": {
-        "m": false,
-        "a": false,
-        "e": false,
-        "n": false
-      }
-    },
-    {
-      "id": 12292,
-      "plan_time": "2016-05-19 00:00:00",
-      "employee": 522,
-      "comment": "",
-      "agenda": 0,
-      "transport": {
-        "type": "",
-        "seats": 0
-      },
-      "disabled": false,
-      "available_dates": {
-        "m": false,
-        "e": false
-      }
-    },
-    {
-      "id": 12293,
-      "plan_time": "2016-05-20 00:00:00",
-      "employee": 522,
-      "comment": "",
-      "agenda": 0,
-      "transport": {
-        "type": "",
-        "seats": 0
-      },
-      "disabled": false,
-      "available_dates": {
-        "m": false,
-        "e": false
-      }
-    },
-    {
-      "id": 12294,
-      "plan_time": "2016-05-21 00:00:00",
-      "employee": 522,
-      "comment": "",
-      "agenda": 0,
-      "transport": {
-        "type": "",
-        "seats": 0
-      },
-      "disabled": false,
-      "available_dates": {
-        "a": false
-      }
-    },
-    {
-      "id": 12295,
-      "plan_time": "2016-05-22 00:00:00",
-      "employee": 522,
-      "comment": "",
-      "agenda": 0,
-      "transport": {
-        "type": "",
-        "seats": 0
-      },
-      "disabled": false,
-      "available_dates": {
-        "e": false
-      }
-    },
-    {
-      "id": 12347,
-      "plan_time": "2016-05-16 00:00:00",
-      "employee": 522,
-      "comment": "",
-      "agenda": 0,
-      "transport": {
-        "type": "",
-        "seats": 0
-      },
-      "disabled": true,
-      "available_dates": []
-    }
-  ],
+    ],
   "status": "success"
 }
 ```
@@ -1363,10 +1282,43 @@ Invalid token — a 401 unauthorized response will be received!
 </aside>
 
 <aside class="success">
-Success — a test user is registered!
+Success — upload successful!
 </aside>
 
 #Admin
+
+## Get users count
+
+> The command returns JSON structured like this:
+
+```json
+{
+  "data": 12826,
+  "status": "success"
+}
+```
+
+This endpoint is used to get a count of all users.
+
+### HTTP Request
+
+`GET http://shooble-api.bitstoneint.com/api/v1/admin/users/count`
+
+### Headers
+
+This request must contain the authToken header with a valid user token for admin in order to be performed
+
+Header | Value |
+-------| -------
+authToken| a valid login token for admin
+
+<aside class="warning">
+Invalid token — a 401 unauthorized response will be received!
+</aside>
+
+<aside class="success">
+Success — count of the users!
+</aside>
 
 ## Get users
 
@@ -1374,46 +1326,129 @@ Success — a test user is registered!
 
 ```json
 {
-  "data": [
-    {
-      "id": 428,
-      "username": "zonne.holtslag",
-      "firstname": "Zonne",
-      "lastname": "Holtslag",
-      "email": "oana.vlad@bitstone.eu",
-      "active": "1",
-      "member_of": "99910",
-      "link_id": null,
-      "role": "",
-      "counter": 1,
-      "created": null,
-      "lastlogin": "2016-04-22 00:00:00",
-      "hyvesnaam": null,
-      "image": null,
-      "user_type": "employee",
-      "gender": "female",
-      "initials": "",
-      "phone": "123456789",
-      "mobile": "123456789",
-      "see_holding": "",
-      "default_holding": 0,
-      "facebook_username": "",
-      "linkedin_username": "",
-      "facebook_token": "",
-      "facebook_id": "",
-      "planner_group": "",
-      "office_type": "",
-      "ext_id": 0,
-      "language": "nl",
-      "lastsync_master": "0000-00-00 00:00:00",
-      "lastsync_slave": "0000-00-00 00:00:00",
-      "last_change": "2016-05-03 13:21:08",
-      "created_at": null,
-      "updated_at": "2016-05-13 14:32:33",
-      "tmp_password": "e9b00a95",
-      "is_admin": 0
-    }
-  ],
+  "data": {
+    "total": 12826,
+    "per_page": "3",
+    "current_page": 700,
+    "last_page": 4276,
+    "next_page_url": "http://shooble-api.local/api/v1/admin/users?page=701",
+    "prev_page_url": "http://shooble-api.local/api/v1/admin/users?page=699",
+    "from": 2098,
+    "to": 2100,
+    "data": [
+      {
+        "id": 14266,
+        "username": "auke.tummers",
+        "firstname": "Auke",
+        "lastname": "Test",
+        "email": "test@yopmail.com",
+        "active": "0",
+        "member_of": "99910",
+        "link_id": null,
+        "role": "",
+        "counter": 0,
+        "created": null,
+        "lastlogin": "0000-00-00 00:00:00",
+        "image": null,
+        "user_type": "employee",
+        "gender": "male",
+        "initials": "",
+        "phone": "",
+        "mobile": "7777777777",
+        "see_holding": "",
+        "default_holding": 0,
+        "facebook_username": "",
+        "linkedin_username": "",
+        "office_type": "",
+        "planner_group": "",
+        "facebook_id": "",
+        "facebook_token": "",
+        "language": "nl",
+        "ext_id": 0,
+        "lastsync_master": "0000-00-00 00:00:00",
+        "lastsync_slave": "0000-00-00 00:00:00",
+        "last_change": "2016-04-13 12:22:47",
+        "created_at": null,
+        "updated_at": "2016-06-01 13:30:05",
+        "tmp_password": "...",
+        "is_admin": 0
+      },
+      {
+        "id": 12412,
+        "username": "Aukeh",
+        "firstname": "Auke",
+        "lastname": "Test",
+        "email": "test@yopmail.com",
+        "active": "0",
+        "member_of": "99910",
+        "link_id": null,
+        "role": "",
+        "counter": 0,
+        "created": null,
+        "lastlogin": "0000-00-00 00:00:00",
+        "image": null,
+        "user_type": "employee",
+        "gender": "male",
+        "initials": "",
+        "phone": "",
+        "mobile": "777777777",
+        "see_holding": "",
+        "default_holding": 0,
+        "facebook_username": "",
+        "linkedin_username": "",
+        "office_type": "",
+        "planner_group": "",
+        "facebook_id": "",
+        "facebook_token": "",
+        "language": "nl",
+        "ext_id": 0,
+        "lastsync_master": "0000-00-00 00:00:00",
+        "lastsync_slave": "0000-00-00 00:00:00",
+        "last_change": "2016-04-04 12:46:23",
+        "created_at": null,
+        "updated_at": "2016-06-01 13:27:40",
+        "tmp_password": "...",
+        "is_admin": 0
+      },
+      {
+        "id": 6238,
+        "username": "Aukje",
+        "firstname": "Aukje",
+        "lastname": "Test",
+        "email": "test@yopmail.com",
+        "active": "0",
+        "member_of": "99910",
+        "link_id": null,
+        "role": "",
+        "counter": 0,
+        "created": null,
+        "lastlogin": "0000-00-00 00:00:00",
+        "image": null,
+        "user_type": "employee",
+        "gender": "female",
+        "initials": "",
+        "phone": "",
+        "mobile": "777777777",
+        "see_holding": "",
+        "default_holding": 0,
+        "facebook_username": null,
+        "linkedin_username": null,
+        "office_type": null,
+        "planner_group": null,
+        "facebook_id": null,
+        "facebook_token": null,
+        "language": "nl",
+        "ext_id": 0,
+        "lastsync_master": null,
+        "lastsync_slave": null,
+        "last_change": "2016-04-04 12:46:23",
+        "created_at": null,
+        "updated_at": "2016-06-01 13:20:41",
+        "tmp_password": "...",
+        "is_admin": 0
+      }
+    ]
+  },
   "status": "success"
 }
 ```
@@ -1423,7 +1458,7 @@ If sort_field and sort_type are not set the default values are: sort_field='user
 
 ### HTTP Request
 
-`GET http://shooble-api.bitstoneint.com/api/v1/users`
+`GET http://shooble-api.bitstoneint.com/api/v1/admin/users`
 
 ### Headers
 
@@ -1431,7 +1466,7 @@ This request must contain the authToken header with a valid user token in order 
 
 Header | Value |
 -------| -------
-authToken| a valid login token
+authToken| a valid login token for admin
 
 ### Query Parameters
 
@@ -1440,13 +1475,463 @@ Parameter | Optional | Description
 sort_field | true | must be one of the user fields(username, firstname, lastname, email, user_type, gender, phone, mobile)
 sort_type | true | must be asc or desc
 keyword | true | any keyword
+items | true | number of items per page
+page | true | page number
 
 <aside class="warning">
 Invalid token — a 401 unauthorized response will be received!
 </aside>
 
 <aside class="success">
-Success — a test user is registered!
+Success — a list of users!
+</aside>
+
+## Get work count
+
+> The command returns JSON structured like this:
+
+```json
+{
+  "data": 4105,
+  "status": "success"
+}
+```
+
+This endpoint is used to get a count of all work in some time interval(by default current year).
+
+### HTTP Request
+
+`GET http://shooble-api.bitstoneint.com/api/v1/admin/work/count`
+
+### Headers
+
+This request must contain the authToken header with a valid user token for admin in order to be performed
+
+Header | Value |
+-------| -------
+authToken| a valid login token for admin
+
+Parameter | Optional | Description
+--------- | ------- | -----------
+startdate | true | start date of interval, by default first day of current year
+enddate | true | if this is set you will have custom interval
+period | true | interval length (week/month/year), by default year
+
+<aside class="warning">
+Invalid token — a 401 unauthorized response will be received!
+</aside>
+
+<aside class="success">
+Success — count of the work for the specified period!
+</aside>
+
+## Get work for all users
+
+> The command returns JSON structured like this:
+
+```json
+{
+  "data": {
+    "total": 4105,
+    "per_page": "2",
+    "current_page": 1,
+    "last_page": 2053,
+    "next_page_url": "http://shooble-api.local/api/v1/admin/work?page=2",
+    "prev_page_url": null,
+    "from": 1,
+    "to": 2,
+    "data": [
+      {
+        "id": 42679,
+        "agenda": 42679,
+        "job_type": "spoel",
+        "start_time": "2016-01-04 00:00:00",
+        "end_time": "2016-01-04 16:30:00",
+        "pickup_place": "Einsteinlaan 20, Rijswijk",
+        "pickup_time": "2016-01-04 11:45:00",
+        "number_persons": 1,
+        "hide_end_time": "",
+        "customer_rate": 264,
+        "customer_rate_price": "19.50",
+        "interconnect_ext_id": null,
+        "pushed": 0,
+        "last_push": null,
+        "subject": "V'business BV",
+        "klant": 2074,
+        "notes": "<strong>Kledingvoorschriften:</strong> Spijkerbroek en sneakers. Je krijgt op locatie een polo.<br />\r\n<em>Melden bij Laura van Hal</em>",
+        "state": "finished",
+        "creation_date": "2015-10-09 16:36:01",
+        "extra": "",
+        "cust_rating": null,
+        "visible": "1",
+        "afgehandeld": null,
+        "betaald": null,
+        "hour_price": null,
+        "hour_price_tc": null,
+        "km_declaration": null,
+        "totale_uren": null,
+        "totale_tc_uren": null,
+        "km": "",
+        "km_klant": null,
+        "old_id": 0,
+        "jobtype": null,
+        "invoice_id": "88882",
+        "visible_wn": "1",
+        "ordertype": 100,
+        "holding": 5,
+        "location_street": "Einsteinlaan 20",
+        "location_postal_code": "2289 CC",
+        "location_place": "Rijswijk",
+        "notes_internal": "",
+        "serie": null,
+        "description": "Indien mogelijk Razvan",
+        "planner_group": null,
+        "planner_user": null,
+        "pool_allowed": null,
+        "features": null,
+        "customer_rating_notes": "",
+        "discount": 0,
+        "total_line": null,
+        "payment_line": null,
+        "free_lines": null,
+        "cost_centre": null,
+        "cost_centre_client": null,
+        "open_shifts": 1,
+        "checkpoints": [],
+        "questionnaire": [],
+        "colleagues": [
+          {
+            "id": 9958,
+            "firstname": "Anne-Jo",
+            "lastname": "Meijer",
+            "email": "test@gmail.com",
+            "phone": "",
+            "image": null
+          }
+        ]
+      },
+      {
+        "id": 42680,
+        "agenda": 42680,
+        "job_type": "spoel",
+        "start_time": "2016-01-05 00:00:00",
+        "end_time": "2016-01-05 16:30:00",
+        "pickup_place": "Einsteinlaan 20, Rijswijk",
+        "pickup_time": "2016-01-05 11:45:00",
+        "number_persons": 1,
+        "hide_end_time": "",
+        "customer_rate": 264,
+        "customer_rate_price": "19.50",
+        "interconnect_ext_id": null,
+        "pushed": 0,
+        "last_push": null,
+        "subject": "V'business BV",
+        "klant": 2074,
+        "notes": "<strong>Kledingvoorschriften:</strong> Spijkerbroek en sneakers. Je krijgt op locatie een polo.<br />\r\n<em>Melden bij Laura van Hal</em>",
+        "state": "finished",
+        "creation_date": "2015-10-09 16:36:01",
+        "extra": "",
+        "cust_rating": null,
+        "visible": "1",
+        "afgehandeld": null,
+        "betaald": null,
+        "hour_price": null,
+        "hour_price_tc": null,
+        "km_declaration": null,
+        "totale_uren": null,
+        "totale_tc_uren": null,
+        "km": "",
+        "km_klant": null,
+        "old_id": 0,
+        "jobtype": null,
+        "invoice_id": "88882",
+        "visible_wn": "1",
+        "ordertype": 100,
+        "holding": 5,
+        "location_street": "Einsteinlaan 20",
+        "location_postal_code": "2289 CC",
+        "location_place": "Rijswijk",
+        "notes_internal": "",
+        "serie": 0,
+        "description": "Indien mogelijk Razvan",
+        "planner_group": null,
+        "planner_user": null,
+        "pool_allowed": null,
+        "features": null,
+        "customer_rating_notes": "",
+        "discount": 0,
+        "total_line": null,
+        "payment_line": null,
+        "free_lines": null,
+        "cost_centre": null,
+        "cost_centre_client": null,
+        "open_shifts": 1,
+        "checkpoints": [],
+        "questionnaire": [],
+        "colleagues": [
+          {
+            "id": 10206,
+            "firstname": "Victor",
+            "lastname": "Lobbrecht",
+            "email": "test@gmail.com",
+            "phone": "0634576006",
+            "image": null
+          }
+        ]
+      }
+    ]
+  },
+  "status": "success"
+}
+```
+
+This endpoint is used to get all work in some time interval(by default current year).
+
+### HTTP Request
+
+`GET http://shooble-api.bitstoneint.com/api/v1/admin/work`
+
+### Headers
+
+This request must contain the authToken header with a valid user token for admin in order to be performed
+
+Header | Value |
+-------| -------
+authToken| a valid login token for admin
+
+Parameter | Optional | Description
+--------- | ------- | -----------
+startdate | true | start date of interval, by default first day of current year
+enddate | true | if this is set you will have custom interval
+period | true | interval length (week/month/year), by default year
+items | true | number of items per page - by default 10
+page | true | page number
+questionnaire | true | if true, will return also the questionnaire for every job
+checkpoints | true | if true, will return also the checkpoints for every job
+colleagues | true | if true, will return also the employees for every job
+
+<aside class="warning">
+Invalid token — a 401 unauthorized response will be received!
+</aside>
+
+<aside class="success">
+Success — all the work for the specified period!
+</aside>
+
+## Get work for specific user
+
+> The command returns JSON structured like this:
+
+```json
+{
+  "data": [
+    {
+      "id": 59522,
+      "client": "Extern",
+      "place": "",
+      "street": "",
+      "number": "",
+      "time": "2016-04-14 07:30:00",
+      "employee_set": null,
+      "invite_id": 280367,
+      "supervisor": 0,
+      "location_street": " Binckhorstlaan 249 (Fokker Terminal)",
+      "location_postal_code": "2516BB",
+      "location_place": "Den Haag",
+      "subject": "Catering Meesters Extern",
+      "colleagues": [
+        {
+          "id": 7034,
+          "firstname": "Ramon",
+          "lastname": "Test",
+          "email": "test@hotmail.com",
+          "phone": "123456789",
+          "image": ""
+        },
+        {
+          "id": 7125,
+          "firstname": "Ivo",
+          "lastname": "Test",
+          "email": "test@hotmail.com",
+          "phone": "123456789",
+          "image": ""
+        },
+        {
+          "id": 9051,
+          "firstname": "Hanna",
+          "lastname": "Test",
+          "email": "test@hotmail.com",
+          "phone": "hidden/12-07-2017",
+          "image": null
+        },
+        {
+          "id": 9345,
+          "firstname": "Gamin",
+          "lastname": "Test",
+          "email": "test@gmail.com",
+          "phone": "123456789",
+          "image": null
+        },
+        {
+          "id": 11353,
+          "firstname": "Jelmar",
+          "lastname": "Test",
+          "email": "test@gmail.com",
+          "phone": "P 15-06-2017 hidden",
+          "image": null
+        },
+        {
+          "id": 12122,
+          "firstname": "Sandra",
+          "lastname": "IJssel",
+          "email": "test@hotmail.com",
+          "phone": "123456789",
+          "image": null
+        },
+        {
+          "id": 12332,
+          "firstname": "Iva",
+          "lastname": "Skrabalova",
+          "email": "test@email.cz",
+          "phone": "123456789",
+          "image": null
+        },
+        {
+          "id": 14238,
+          "firstname": "Victor",
+          "lastname": "Test",
+          "email": "test@telfort.nl",
+          "phone": "123456789",
+          "image": null
+        }
+      ],
+      "questionnaire": [],
+      "checkpoints": []
+    },
+    {
+      "id": 59524,
+      "client": "Extern",
+      "place": "",
+      "street": "",
+      "number": "",
+      "time": "2016-04-15 07:30:00",
+      "employee_set": null,
+      "invite_id": 281308,
+      "supervisor": 0,
+      "location_street": " Binckhorstlaan 249 (Fokker Terminal)",
+      "location_postal_code": "2516BB",
+      "location_place": "Den Haag",
+      "subject": "Catering Meesters Extern",
+      "colleagues": [
+        {
+          "id": 4575,
+          "firstname": "Laurence",
+          "lastname": "Test",
+          "email": "test@msn.com",
+          "phone": "123456789",
+          "image": null
+        },
+        {
+          "id": 9345,
+          "firstname": "Gamin",
+          "lastname": "Test",
+          "email": "test@gmail.com",
+          "phone": "123456789",
+          "image": null
+        },
+        {
+          "id": 10129,
+          "firstname": "Pradeep",
+          "lastname": "Test",
+          "email": "test@live.nl",
+          "phone": "123456789",
+          "image": null
+        },
+        {
+          "id": 10839,
+          "firstname": "Petra",
+          "lastname": "Test",
+          "email": "test@yahoo.com",
+          "phone": "P01-08-2022",
+          "image": null
+        },
+        {
+          "id": 11251,
+          "firstname": "Marije",
+          "lastname": "Test",
+          "email": "test@hotmail.com",
+          "phone": "123456789",
+          "image": null
+        },
+        {
+          "id": 11706,
+          "firstname": "Romina",
+          "lastname": "Test",
+          "email": "rolmezian@gmail.com",
+          "phone": "123456789",
+          "image": null
+        },
+        {
+          "id": 13334,
+          "firstname": "Renate",
+          "lastname": "Test",
+          "email": "test@hotmail.com",
+          "phone": "123456789",
+          "image": null
+        },
+        {
+          "id": 13611,
+          "firstname": "Romy",
+          "lastname": "Test",
+          "email": "test@live.nl",
+          "phone": "123456789",
+          "image": null
+        },
+        {
+          "id": 14197,
+          "firstname": "Lilly",
+          "lastname": "Test",
+          "email": "test@live.com",
+          "phone": "123456789",
+          "image": null
+        }
+      ],
+      "questionnaire": [],
+      "checkpoints": []
+    }
+  ],
+  "status": "success"
+}
+```
+
+This endpoint is used to get all work in some time interval(by default current year).
+
+### HTTP Request
+
+`GET http://shooble-api.bitstoneint.com/api/v1/admin/work`
+
+### Headers
+
+This request must contain the authToken header with a valid user token for admin in order to be performed
+
+Header | Value |
+-------| -------
+authToken| a valid login token for admin
+
+Parameter | Optional | Description
+--------- | ------- | -----------
+startdate | true | start date of interval, by default first day of current year
+enddate | true | if this is set you will have custom interval
+period | true | interval length (week/month/year), by default year
+items | true | number of items per page - by default 10
+page | true | page number
+
+<aside class="warning">
+Invalid token — a 401 unauthorized response will be received!
+</aside>
+
+<aside class="success">
+Success — all the work of the specified user for the specified period!
 </aside>
 
 
